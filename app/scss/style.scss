@@ -4,4 +4,164 @@
 @import "libs";
 @import "global";
 
+.header{
+  &__top{
+    background-color: $sub-gray;
+    margin-bottom: 25px;
+  }
+  &__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+  }
+  &__top-region{
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    column-gap: 6px;
+    padding-right: 28px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      right: 0;
+      background-image: url('../images/icons/arrow-down.svg');
+    }
+  }
+  &__top-box{
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+  }
+  &__top-phone{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding-left: 28px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -16px;
+      background-color: $gray;
+    }
+    &:hover{
+      color: $peach;
+      .header__phone-img{
+        path{
+          fill: $peach;
+        }
+      }
+    }
+  }
+  &__phone-img{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    path{
+      transition: fill .2s ease-in-out;
+    }
+  }
+  &__phone-text{
+    @extend %opensans-600;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 3px 0;
+    transition: color .2s ease-in-out;
+  }
+  &__top-profile{
+    @extend %opensans-600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    cursor: pointer;
+    padding-right: 28px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      right: 0;
+      background-image: url('../images/icons/arrow-down.svg');
+    }
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.04), 0px 0px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  &__bottom-wrapper{
+    display: flex;
+    align-items: center;
+    padding: 6px 0 6px 6px;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 22px;
+    margin-right: 48px;
+    span{
+      @extend %opensans-700;
+      font-size: 8px;
+      line-height: 6px;
+      width: 54px;
+    }
+  }
+  &__bottom-box{
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+    padding: 14px 21px 14px 0;
+  }
+  &__box-selection{
+    @extend %link-red;
+    padding: 22px 78px;
+  }
+}
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+  }
+  &__list-link{
+    @extend %opensans-600;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 2px 0;
+    transition: color .2s ease-in-out;
+    &:hover{
+      color: $peach;
+    }
+  }
+}
+
 @import "media";
