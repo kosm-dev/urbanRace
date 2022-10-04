@@ -4,6 +4,10 @@ body {
 }
 
 body {
+  @extend %opensans-400;
+  font-size: 24px;
+  line-height: 38px;
+  color: $gray;
 }
 
 .lock {
@@ -33,10 +37,10 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1700px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 // style

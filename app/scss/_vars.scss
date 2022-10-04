@@ -5,3 +5,60 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 $xs: 374px;
+
+// colors
+$gray: #4F4F4F;
+$sub-gray: #F1F1F1;
+$peach: #F05454;
+
+// fonts
+%opensans-400{
+  font-family: "OpenSans-Regular";
+  font-weight: 400;
+}
+%opensans-600{
+  font-family: "OpenSans-SemiBold";
+  font-weight: 600;
+}
+%opensans-700{
+  font-family: "OpenSans-Bold";
+  font-weight: 700;
+}
+%opensans-800{
+  font-family: "OpenSans-ExtraBold";
+  font-weight: 800;
+}
+%mont-400{
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+}
+%mont-500{
+  font-family: "Montserrat-Medium";
+  font-weight: 500;
+}
+%mont-600{
+  font-family: "Montserrat-SemiBold";
+  font-weight: 600;
+}
+%mont-700{
+  font-family: "Montserrat-Bold";
+  font-weight: 700;
+}
+
+// componets
+%link-red{
+  @extend %opensans-700;
+  background-color: $peach;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  transition: background-color .2s ease-in-out;
+  &:hover{
+    background-color: #E35050;
+  }
+  &:focus{
+    background-color: #B93E3E;
+  }
+}
