@@ -4,18 +4,18 @@
 @import "libs";
 @import "global";
 
-.header{
-  &__top{
+.header {
+  &__top {
     background-color: $sub-gray;
     margin-bottom: 25px;
   }
-  &__top-inner{
+  &__top-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 9px 0;
   }
-  &__top-region{
+  &__top-region {
     cursor: pointer;
     font-size: 14px;
     line-height: 24px;
@@ -23,29 +23,29 @@
     column-gap: 6px;
     padding-right: 28px;
     position: relative;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       width: 24px;
       height: 24px;
       top: 0;
       right: 0;
-      background-image: url('../images/icons/arrow-down.svg');
+      background-image: url("../images/icons/arrow-down.svg");
     }
   }
-  &__top-box{
+  &__top-box {
     display: flex;
     align-items: center;
     column-gap: 32px;
   }
-  &__top-phone{
+  &__top-phone {
     display: flex;
     align-items: center;
     column-gap: 8px;
     padding-left: 28px;
     position: relative;
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       width: 1px;
       height: 28px;
@@ -54,16 +54,16 @@
       right: -16px;
       background-color: $gray;
     }
-    &:hover{
+    &:hover {
       color: $peach;
-      .header__phone-img{
-        path{
+      .header__phone-img {
+        path {
           fill: $peach;
         }
       }
     }
   }
-  &__phone-img{
+  &__phone-img {
     position: absolute;
     top: 5px;
     left: 0;
@@ -72,18 +72,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    path{
-      transition: fill .2s ease-in-out;
+    path {
+      transition: fill 0.2s ease-in-out;
     }
   }
-  &__phone-text{
+  &__phone-text {
     @extend %opensans-600;
     font-size: 14px;
     line-height: 24px;
     padding: 3px 0;
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
-  &__top-profile{
+  &__top-profile {
     @extend %opensans-600;
     font-size: 14px;
     line-height: 24px;
@@ -93,17 +93,17 @@
     cursor: pointer;
     padding-right: 28px;
     position: relative;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       width: 24px;
       height: 24px;
       top: 0;
       right: 0;
-      background-image: url('../images/icons/arrow-down.svg');
+      background-image: url("../images/icons/arrow-down.svg");
     }
   }
-  &__bottom{
+  &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,57 +111,64 @@
     border-radius: 4px;
     background-color: #fff;
   }
-  &__bottom-wrapper{
+  &__bottom-wrapper {
     display: flex;
     align-items: center;
     padding: 6px 0 6px 6px;
   }
-  &__logo{
+  &__logo {
     display: flex;
     align-items: center;
     padding: 20px 0 20px 22px;
     margin-right: 48px;
-    span{
+    span {
       @extend %opensans-700;
       font-size: 8px;
       line-height: 6px;
       width: 54px;
     }
   }
-  &__bottom-box{
+  &__bottom-box {
     display: flex;
     align-items: center;
     column-gap: 22px;
     padding: 14px 21px 14px 0;
   }
-  &__box-selection{
+  &__box-selection {
     @extend %link-red;
     padding: 22px 78px;
   }
 }
 
-.menu{
-  &__list{
+.menu {
+  &__list {
     display: flex;
   }
-  &__list-item{
+  &__list-item {
     display: flex;
     align-items: center;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 40px;
     }
   }
-  &__list-link{
+  &__list-link {
     @extend %opensans-600;
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
     padding: 2px 0;
-    transition: color .2s ease-in-out;
-    &:hover{
+    transition: color 0.2s ease-in-out;
+    &:hover {
       color: $peach;
     }
   }
+}
+
+// top
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 @import "media";
