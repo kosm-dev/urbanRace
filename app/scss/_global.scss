@@ -92,3 +92,14 @@ body {
 .burger--active span {
   transform: scale(0);
 }
+
+.logo{
+  display: flex;
+  align-items: center;
+  span{
+    @extend %opensans-700;
+    font-size: 8px;
+    line-height: 6px;
+    width: 54px;
+  }
+}

@@ -10,10 +10,10 @@ const browserSync   = require('browser-sync').create();
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'app/',
-      notify: false
-    }
-  });
+      baseDir: 'app/'
+    },
+    notify: false
+  })
 }
 
 
@@ -33,6 +33,7 @@ function styles() {
 // отвечает за скрипты
 function scripts() {
   return src([
+    'node_modules/swiper/swiper-bundle.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
