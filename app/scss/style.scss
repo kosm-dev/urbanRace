@@ -157,16 +157,6 @@
 }
 
 .footer{
-  position: relative;
-  &::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 292px;
-    top: 70px;
-    left: 0;
-    background-image: url('../images/footer-bg.jpg');
-  }
   &__wrapper{
     background-color: $white;
   }
@@ -317,12 +307,9 @@
       position: absolute;
       width: 206px;
       height: 60px;
-      top: 50%;
+      top: 0;
       left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(245, 56, 56, 0.35);
-      filter: blur(27px);
-      z-index: -1;
+      transform: trans
     }
   }
 }
