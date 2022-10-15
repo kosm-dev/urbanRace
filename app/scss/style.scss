@@ -157,6 +157,18 @@
 }
 
 .footer{
+  position: relative;
+  overflow: hidden;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 292px;
+    top: 148px;
+    left: -73px;
+    background-color: $white;
+    transform: rotate(4.54deg);
+  }
   &__wrapper{
     background-color: $white;
   }
@@ -310,6 +322,103 @@
       top: 0;
       left: 50%;
       transform: trans
+    }
+  }
+}
+
+.current{
+  background-image: url('../images/current-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 38px 0 194px;
+  transform: translateY(120px);
+  &__title{
+    @extend %title;
+    color: #FEFEFE;
+    margin-bottom: 14px;
+  }
+  &__buttons{
+    display: flex;
+    margin-bottom: 56px;
+  }
+  &__button{
+    border: none;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #FEFEFE;
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:not(:last-child){
+      margin-right: 12px;
+    }
+  }
+  &__button--active{
+    background-color: $peach;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  }
+  .swiper-slide{
+    background-color: #fff;
+    border-radius: 4px;
+    &__imgbox{
+      width: 376px;
+      height: 221px;
+      padding: 18px 18px 0 18px;
+      margin-bottom: 15px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: -16px;
+        left: 28px;
+        background-image: url('../images/content/current/blur.png');
+        filter: blur(26.9231px);
+        border-radius: 11.6951px;
+        z-index: -1;
+      }
+    }
+    &__img{
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__content{
+      padding: 0 18px;
+    }
+    &__content-name{
+      @extend %opensans-600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #151D0C;
+      letter-spacing: -0.005em;
+      margin-bottom: 8px;
+    }
+    &__content-descr{
+      font-size: 14px;
+      line-height: 20px;
+      color: #8A8E85;
+      margin-bottom: 10px;
+    }
+    &__bottom{
+      padding: 0 18px 15px 18px;
+      display: flex;
+    }
+    &__bottom-date{
+      @extend %mont-400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #30475E;
+      margin-right: 15px;
+    }
+    &__bottom-link{
+      @extend %mont-700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $peach;
     }
   }
 }

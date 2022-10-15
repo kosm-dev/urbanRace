@@ -1,6 +1,5 @@
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
+const currentswiper = new Swiper('.currentslider', {
+  loop: false,
+  spaceBetween: 10,
+  slidesPerView: 4,
 });

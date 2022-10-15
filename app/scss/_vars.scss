@@ -63,3 +63,10 @@ $white: #F5F5F5;
     background-color: #B93E3E;
   }
 }
+
+%title{
+  @extend %mont-700;
+  font-size: 35px;
+  line-height: 22px;
+  padding: 21px 0;
+}
