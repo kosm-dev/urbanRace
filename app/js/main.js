@@ -3,3 +3,5 @@ const currentswiper = new Swiper('.currentslider', {
   spaceBetween: 10,
   slidesPerView: 4,
 });
+
+var mixer = mixitup('.current__items');
